@@ -8,7 +8,7 @@ print(Style.RESET_ALL)
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 target = input("Enter the IP you to be scanned: ")
 print("port  state")
-for port in range(3304,3308):
+for port in range(10,100):          #you can specify the range as per your need
     if s.connect_ex((target, port)):
         print(Fore.CYAN+"{}  closed".format(port))
     else:
